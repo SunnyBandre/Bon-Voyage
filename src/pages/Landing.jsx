@@ -14,6 +14,7 @@ function Landing() {
           <p className="cursor-pointer hover:text-yellow-400">Blog</p>
           <p className="cursor-pointer hover:text-yellow-400">About</p>
           <p className="cursor-pointer hover:text-yellow-400">Contact</p>
+
           <p className="cursor-pointer hover:text-yellow-400 flex items-center gap-1">
             IND
             <MdKeyboardArrowDown />
