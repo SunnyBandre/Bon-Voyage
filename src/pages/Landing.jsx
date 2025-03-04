@@ -1,9 +1,12 @@
 import React from "react";
 import { CgProfile } from "react-icons/cg";
 import { FaArrowRight, FaSearch } from "react-icons/fa"; // Import Search Icon
-import { MdArrowRight, MdKeyboardArrowDown } from "react-icons/md";
+import { MdKeyboardArrowDown } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 function Landing() {
+  const navigate = useNavigate();
+
   return (
     <div className="bg-[url('/images/Home.png')] bg-cover bg-center bg-no-repeat h-screen w-screen text-white flex flex-col justify-between px-10 py-6">
       {/* Navbar */}
@@ -64,7 +67,10 @@ function Landing() {
         </div>
 
         {/* Right: Explore Button on Extreme Bottom Right */}
-        <button className="bg-[#FFB904] text-white font-bold text-lg px-5 py-2 rounded-lg shadow-md hover:bg-yellow-500 transition flex items-center gap-3">
+        <button
+          className="bg-[#FFB904] text-white font-bold text-lg px-5 py-2 rounded-lg shadow-md hover:bg-yellow-500 transition flex items-center gap-3"
+          onClick={() => navigate("/discover")}
+        >
           Explore <FaArrowRight />
         </button>
       </div>
