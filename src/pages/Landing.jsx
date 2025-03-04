@@ -3,28 +3,14 @@ import { CgProfile } from "react-icons/cg";
 import { FaArrowRight, FaSearch } from "react-icons/fa"; // Import Search Icon
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
+import Navbar from "./Navbar";
 
 function Landing() {
   const navigate = useNavigate();
 
   return (
     <div className="bg-[url('/images/Home.png')] bg-cover bg-center bg-no-repeat h-screen w-screen text-white flex flex-col justify-between px-10 py-6">
-      {/* Navbar */}
-      <div className="flex justify-between items-center">
-        <h3 className="text-3xl font-metalMania uppercase">Traveltree</h3>
-        <div className="font-roboto font-semibold text-lg flex gap-6">
-          <p className="cursor-pointer hover:text-yellow-400">Home</p>
-          <p className="cursor-pointer hover:text-yellow-400">Blog</p>
-          <p className="cursor-pointer hover:text-yellow-400">About</p>
-          <p className="cursor-pointer hover:text-yellow-400">Contact</p>
-
-          <p className="cursor-pointer hover:text-yellow-400 flex items-center gap-1">
-            IND
-            <MdKeyboardArrowDown />
-          </p>
-          <CgProfile size={30} />
-        </div>
-      </div>
+      <Navbar />
 
       {/* Center Content */}
       <div className="text-center space-y-4">

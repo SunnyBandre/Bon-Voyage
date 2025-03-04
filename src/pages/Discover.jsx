@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import Navbar from "./Navbar";
 
 const images = [
   { src: "/images/Sydney.png", name: "Sydney" },
   { src: "/images/Switzerland.png", name: "Switzerland" },
   { src: "/images/Dubai.png", name: "Dubai" },
-  { src: "/images/NYC.png", name: "NYC" },
+  { src: "/images/NYC.png", name: "New York City" },
   { src: "/images/Paris.png", name: "Paris" },
   { src: "/images/India.png", name: "India" },
   { src: "/images/Singapore.png", name: "Singapore" },
@@ -27,19 +28,7 @@ function Discover() {
 
   return (
     <div className="bg-[url('/images/Home.png')] bg-cover bg-center bg-no-repeat h-screen w-screen text-white flex flex-col px-10 py-6 overflow-hidden">
-      {/* Navbar */}
-      <div className="flex justify-between items-center">
-        <h3 className="text-3xl font-metalMania uppercase">Traveltree</h3>
-        <div className="font-roboto font-semibold text-lg flex gap-6 items-center">
-          <p className="cursor-pointer hover:text-yellow-400">Home</p>
-          <p className="cursor-pointer hover:text-yellow-400">Blog</p>
-          <p className="cursor-pointer hover:text-yellow-400">About</p>
-          <p className="cursor-pointer hover:text-yellow-400">Contact</p>
-          <button className="bg-white/20 text-white px-4 py-2 rounded-lg">
-            Book Now
-          </button>
-        </div>
-      </div>
+      <Navbar showBook={true} />
 
       {/* Center Content */}
       <div className="flex flex-col items-center justify-center flex-grow">
@@ -75,7 +64,7 @@ function Discover() {
                   alt={img.name}
                   className="w-full h-[80%] object-cover rounded-lg"
                 />
-                <div className="absolute text-white px-2 py-1 bottom-2 rounded-md text-sm text-center w-full">
+                <div className="absolute text-white px-2 py-1 bottom-2 rounded-md text-3xl font-bold text-center w-full">
                   {img.name}
                 </div>
               </div>
